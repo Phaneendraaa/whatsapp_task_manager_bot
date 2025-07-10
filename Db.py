@@ -1,5 +1,7 @@
 from pymongo import MongoClient
-client = MongoClient("mongodb://localhost:27017/")
+import os
+uri = os.getenv("MONGO_URI")
+client = MongoClient(uri)
 
 # Choose a database
 db = client["flaskdb"]
