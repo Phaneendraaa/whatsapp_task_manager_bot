@@ -10,7 +10,7 @@ app.secret_key = 'your-very-secret-key'
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"  # Allow HTTP for dev
 
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-CLIENT_SECRETS_FILE = "/etc/secrets/client_secret.json"
+CLIENT_SECRETS_FILE = "client_secret.json"
 import os
 redirect_uri = os.getenv("REDIRECT_URI")
 
