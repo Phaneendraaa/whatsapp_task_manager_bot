@@ -19,7 +19,7 @@ def get_calendar_service(credentials_data):
 def create_task(user_number, user_msg):
     creds = collection.find_one({'user_number': user_number})
     if not creds:
-        return "User not found. Please authorize with Google first.Try setup calendar"
+        return "User not found. Please authorize with Google first. Try \"setup calendar\""
 
     service = get_calendar_service(creds)
     return create_event(service, user_msg)
